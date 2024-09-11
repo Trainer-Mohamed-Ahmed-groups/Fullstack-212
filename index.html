@@ -14,122 +14,71 @@
 </head>
 
 <body>
-    <!-- <p>This is P</p>
-        <p>This is P 2</p>
+    <ol>
+        <li>HTML
+            <ul>
+                <li>Head</li>
+                <li>Body</li>
+            </ul>
+        </li>
+        <li>CSS</li>
+    </ol>
 
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia iueeee laudantium rem quaerat rerum harum architecto consectetur ipsum in voluptates, deserunt, non cum numquam. Tempore maxime mollitia beatae vitae recusandae!</p>
-
-        <span>This is span one</span>
-        <span>This is span one</span>
-        <div>This is division</div>
-
-        <h1>This is H1</h1>
-        <h2>This is H2</h2>
-        <h3>This is H3</h3>
-        <h4>This is H4</h4>
-        <h5>This is H5</h5>
-        <h6>This is H6</h6>
-        <mohamed>This is H7</mohamed> -->
+    <ul>
+        <li>JS</li>
+        <li>React</li>
+    </ul>
 
 
     <hr>
-    <img src="./images/nature.avif" alt="This is nature">
-
-    <p>This is P</p>
-    <blockquote>This is Quotation</blockquote>
-
-    <a href="https://google.com">Click me</a>
-
-    <hr>
-    <table border="">
-        <caption>Employees</caption>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th colspan="2">Description</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>John Doe</td>
-                <td>Software Engineer</td>
-                <td rowspan="2">Male</td>
-            </tr>
-            <tr>
-                <td>Mohamed</td>
-                <td>Developer</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <hr>
-
-    <b>This is bold</b>
-    <strong>This is bold</strong>
-    <br><br>
-    <i>This is italic</i>
-    <em>This is italic</em>
-    <br><br>
-    <mark>This is marked</mark>
-    <br><br>
-    <u>This is underline</u>
-    <ins>This is ins</ins>
-    <br><br>
-    <del>This is deleted</del>
-    <s>This is deleted</s>
-    <br><br>
-    <span>85 <sup>90</sup> </span>
-    <br><br>
-    <span>85 <sub>90</sub> </span>
-    <br><br>
-    <small>This is small text</small>
-    
-    <button>OK</button>
+    <form action="./thanks.html">
+        <!-- <label for="name">Name:</label> -->
+        <input type="text" id="username" value="Mohamed" autofocus autocomplete="off" name="name">
+        <input type="text" id="username" value="Mohamed" disabled name="name">
+        <br>
+        <input type="password" placeholder="Enter your pass" name="mtPassword" id="" required>
+        <br>
 
 
-    <hr>
-    <code>This is code</code>
-    <kbd>This is code</kbd>
-    <samp>This is code</samp>
-    <pre>This      is       Preformatted text</pre>
-    <var>This is i</var>
+        <select name="myCourses" id="">
+            <optgroup label="Frontend">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+            </optgroup>
+            <optgroup label="Backend">
+                <option value="php" selected>PHP</option>
+                <option value="my_sql">MY SQL</option>
+            </optgroup>
+        </select>
+        <br>
 
+        <textarea name="" id="" cols="30" rows="10" maxlength="20"></textarea>
+        <br> <br>
+        <input type="color" name="" id="">
+        <br> <br>
+        <input type="date" name="" id="" min="2024-09-10" max="2024-09-17"> <br> <br>
+        <input type="week" name="" id=""> <br> <br>
+        <input type="month" name="" id=""> <br> <br>
+        <input type="time" name="" id=""> <br> <br>
+        <input type="datetime-local" name="" id=""> <br> <br>
+        <label for="">Enter your age</label>
+        <input type="number" name="" id="" min="0" max="10" step="2"><br> <br>
+        <input type="range" name="" id=""><br> <br>
+        <input type="email" name="" id=""><br> <br>
+        <input type="file" name="" id="" accept=".png" multiple><br> <br>
+        <br> <br>
 
-    <hr>
-
-    <a href="https://google.com" target="_blank">Click me</a>
-    <br>
-    <a href="./images/nature.avif" download>Download image</a>
-    <br>
-    <a href="mailto:abc@kimit.com">Send email</a>
-    <br>
-    <a href="sms:124678954">Send SMS</a>
-    <br>
-    <a href="http://wa.me/12345678">Whatsapp</a>
-    <br>
-    <a href="tel:+1234567890">Call</a>
-
-    <hr>
-    <article>This is article</article>
-    <div>This is division</div>
-    <aside>This is aside</aside>
-    <header>This is header</header>
-    <main>This is main</main>
-    <footer>This is footer</footer>
-    <nav>This is nav</nav>
-    <section>This is section</section>
-
-    <hr>
-    <details>
-        <summary>Click me</summary>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tenetur corrupti et explicabo debitis voluptatibus eius eos optio, commodi ducimus aut temporibus repudiandae rem eaque nemo esse nisi. Dolor, consequuntur.</p>
-        <img src="./images/nature.avif" alt="This is nature">
-    </details>
-
-    <figure>
-        <img src="./images/nature.avif" alt="This is nature">
-        <figcaption>This is nature</figcaption>
-    </figure>
+        <input type="radio" name="education" value="graduate" id="graduate">
+        <label for="graduate">Graduate</label>
+        <br>
+        <input type="radio" name="education" checked value="student" id="student">
+        <label for="student">Student</label>
+        <!-- <input type="checkbox" name="" id=""> -->
+        <br> <br>
+        <input type="button" value="I am btn">
+        <input type="reset" value="Reset data">
+        <input type="submit" value="Log in" >
+    </form>
 </body>
 
 </html>
