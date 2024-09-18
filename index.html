@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Session one</title>
+    <title>Session three</title>
 
     <style>
         body {
@@ -14,71 +14,31 @@
 </head>
 
 <body>
-    <ol>
-        <li>HTML
-            <ul>
-                <li>Head</li>
-                <li>Body</li>
-            </ul>
-        </li>
-        <li>CSS</li>
-    </ol>
+    <progress max="10" value="7"></progress> <br><br>
 
-    <ul>
-        <li>JS</li>
-        <li>React</li>
-    </ul>
+    <audio src="./audios/1.mp3" controls></audio> <br><br>
+    <video src="./videos/1.mp4" controls muted loop></video>
 
+    <dl>
+        <dt>This is title</dt>
+        <dd>This is details</dd>
+    </dl>
 
-    <hr>
-    <form action="./thanks.html">
-        <!-- <label for="name">Name:</label> -->
-        <input type="text" id="username" value="Mohamed" autofocus autocomplete="off" name="name">
-        <input type="text" id="username" value="Mohamed" disabled name="name">
-        <br>
-        <input type="password" placeholder="Enter your pass" name="mtPassword" id="" required>
-        <br>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.2064747175104!2d31.345409574647658!3d30.059615517853373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583f69635550c9%3A0x94c4e37b347705d1!2sKimit%20Innovation%20Technology!5e0!3m2!1sen!2seg!4v1726682756985!5m2!1sen!2seg"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
-        <select name="myCourses" id="">
-            <optgroup label="Frontend">
-                <option value="html">HTML</option>
-                <option value="css">CSS</option>
-            </optgroup>
-            <optgroup label="Backend">
-                <option value="php" selected>PHP</option>
-                <option value="my_sql">MY SQL</option>
-            </optgroup>
-        </select>
-        <br>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/5I9VVkZRyF4?si=965KVuf6AG9CMOeq"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-        <textarea name="" id="" cols="30" rows="10" maxlength="20"></textarea>
-        <br> <br>
-        <input type="color" name="" id="">
-        <br> <br>
-        <input type="date" name="" id="" min="2024-09-10" max="2024-09-17"> <br> <br>
-        <input type="week" name="" id=""> <br> <br>
-        <input type="month" name="" id=""> <br> <br>
-        <input type="time" name="" id=""> <br> <br>
-        <input type="datetime-local" name="" id=""> <br> <br>
-        <label for="">Enter your age</label>
-        <input type="number" name="" id="" min="0" max="10" step="2"><br> <br>
-        <input type="range" name="" id=""><br> <br>
-        <input type="email" name="" id=""><br> <br>
-        <input type="file" name="" id="" accept=".png" multiple><br> <br>
-        <br> <br>
+        <div>This is <span>محمد </span> 20</div>
+        <div>This is <bdi>محمد </bdi> 20</div>
 
-        <input type="radio" name="education" value="graduate" id="graduate">
-        <label for="graduate">Graduate</label>
-        <br>
-        <input type="radio" name="education" checked value="student" id="student">
-        <label for="student">Student</label>
-        <!-- <input type="checkbox" name="" id=""> -->
-        <br> <br>
-        <input type="button" value="I am btn">
-        <input type="reset" value="Reset data">
-        <input type="submit" value="Log in" >
-    </form>
-</body>
+    </body>
 
 </html>

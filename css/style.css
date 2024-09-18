@@ -1,0 +1,23 @@
+#user {
+    color: blue
+}
+
+section.desc {
+    color: chartreuse
+}
+
+section {
+    color: brown
+}
+
+
+
+
+/* 
+
+snake case :  employee_email
+camel case : employeeEmail
+Pascal case : EmployeeEmail
+kebab case : employee-email
+
+*/
