@@ -1,16 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-nav {
-    height: 100px;
-    background-color: #EEE
+:root {
+    font-size: 10px;
+    --main: #16edbe
 }
 
-.intro {
-    color: #060e02ab;
-    background-color: #7fffd4;
-    height: calc(100vh - 100px);
-    width: 450px;
-    font-size: 20px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
+body {
+    font-size: 1.4rem;
+    height: 5000px;
+}
+
+.test {
+    font-size: 1.2rem;
+}
+
+* {
+    color: var(--main)
+}
+
+.test,
+.testSpan {
+    font-weight: bold;
+}
+
+.testSection {
+    background-color: var(--main);
+    height: 100px;
+    width: 100px;
+}
+
+.bg_explain {
+    height: 400px;
+    /* background-image:url(../images/nature-sm.jpeg); */
+
+    /* background-image: url(../images/nature.webp);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat; */
+    background: url(../images/nature.webp) center bottom no-repeat
+}
+
+.linear_explain {
+    height: 300px;
+    width: 300px;
+    /* background: linear-gradient(#F00, #00F); */
+    /* background: linear-gradient(to right, #F00, #00F); */
+    /* background: linear-gradient(18deg, black, #dd0e0e); */
+    /* background: repeating-linear-gradient(#F00, #00F 25%) */
+    /* background:radial-gradient(#F00,#00F) */
+    /* background: repeating-radial-gradient(#F00, #00F 25%) */
+    background: conic-gradient(#F00, #00F 25%)
+}
+
+.border_explain {
+    height: 200px;
+    width: 200px;
+    /* border-color: red #00F #080 #CCC;
+    border-width: 30px 20px 10px 50px;
+    border-style: solid dotted groove inset; */
+    
+    
+    border : 3px solid #F00;
+}
+
+.radius_explain{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(167, 231, 29);
+    /* border-radius: 50%; */
+    border-radius:10px 20px 30px 40px
 }
