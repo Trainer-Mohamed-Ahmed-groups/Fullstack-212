@@ -1,28 +1,66 @@
 body {
-    /* margin: 0; */
     height: 5000px;
 }
 
-body.ar {
-    direction: rtl;
+p {
+    background-color: #EEE;
+    width: 600px;
 }
 
-.space {
-    width: 200px;
-    height: 200px;
-    background-color: #e9e9e9;
-    margin-inline-start: 60px;
-    padding: 20px;
+p::first-line {
+    color: red;
+    font-size: 2rem;
 }
 
-/* section nav div { */
-section>nav div {
-    color: red
+p::selection {
+    background-color: #00ff00;
+    color: rgb(0, 255, 255);
+    font-size: 5rem;
+}
+
+li {
+    color: rgb(205, 248, 14);
+    font-size: 2rem;
+    margin-inline-start: 20px;
+}
+
+li::marker {
+    color: red;
+    font-size: 3rem;
 }
 
 
-/* section .test+div { */
-section .test~div {
-    font-weight: bold;
-    color: #080
+
+span:hover::after {
+    display: inline;
+}
+
+span:hover+.arrow {
+    display: block;
+}
+
+span::after {
+    content: "";
+    background-color: blue;
+    padding: 5px;
+    margin: 5px;
+    height: 5px;
+    width: 5px;
+    display: none;
+}
+
+.arrow {
+    height: 0;
+    width: 0;
+    display: none;
+    /* background-color: #0F0; */
+    /* border: 50px solid #F00; */
+
+    /* border-left: 39px solid transparent;
+    border-top: 39px solid transparent;
+    border-right: 39px solid transparent; */
+
+
+    border: 40px solid transparent;
+    border-top: 40px solid #00F;
 }
