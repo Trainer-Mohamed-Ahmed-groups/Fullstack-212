@@ -2,65 +2,85 @@ body {
     height: 5000px;
 }
 
-p {
-    background-color: #EEE;
-    width: 600px;
+* {
+    box-sizing: border-box;
 }
 
-p::first-line {
-    color: red;
-    font-size: 2rem;
-}
-
-p::selection {
-    background-color: #00ff00;
-    color: rgb(0, 255, 255);
-    font-size: 5rem;
-}
-
-li {
-    color: rgb(205, 248, 14);
-    font-size: 2rem;
-    margin-inline-start: 20px;
-}
-
-li::marker {
-    color: red;
-    font-size: 3rem;
-}
-
-
-
-span:hover::after {
+.display_explain {
     display: inline;
 }
 
-span:hover+.arrow {
+.display_explain2 {
     display: block;
 }
 
-span::after {
-    content: "";
-    background-color: blue;
-    padding: 5px;
-    margin: 5px;
-    height: 5px;
-    width: 5px;
-    display: none;
+.display_explain2:nth-child(2) {
+    height: 100px;
+    width: 100px;
+    background-color: #EEE;
 }
 
-.arrow {
-    height: 0;
-    width: 0;
-    display: none;
-    /* background-color: #0F0; */
-    /* border: 50px solid #F00; */
+p span {
+    color: red;
+    background-color: #00F;
+    height: 100px;
+    width: 100px;
+    margin: 30px;
+    display: inline-block;
+    padding: 22px;
+    border: 5px solid #090;
 
-    /* border-left: 39px solid transparent;
-    border-top: 39px solid transparent;
-    border-right: 39px solid transparent; */
+}
+
+.visibility_explain {
+    height: 70px;
+    width: 70px;
+    background-color: #f9f9f9;
+    border: solid
+}
+
+.visibility_explain:nth-of-type(2) {
+    visibility: hidden;
+}
+
+.visibility_explain:first-of-type {
+    /* opacity: .5; */
+    opacity: 50%;
+    /* The same effect */
+}
+
+.first_ul {
+    list-style-type: lower-roman;
+    list-style-position: inside;
+}
+
+.first_ul li {
+    background-color: #090;
+}
+
+table {
+    border-collapse: collapse;
+    caption-side: bottom;
+}
+
+td,
+th {
+    border: 1px solid #4b4b4b;
+}
 
 
-    border: 40px solid transparent;
-    border-top: 40px solid #00F;
+nav ul li {
+    /* display: inline-block; */
+    float: left;
+    margin: 10px;
+}
+
+nav ul div {
+    clear: both
+}
+
+nav ul::after {
+    content: "";
+    display: block;
+    clear: both
 }
