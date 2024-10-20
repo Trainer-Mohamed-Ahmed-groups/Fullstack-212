@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap');
+
+:root {
+    --gradient_one: #6f5cea;
+    --gradient_two: #ae82ef;
+    --primary_color: #02b3d2;
+    --left_color: #FFF;
+    --input_bg: #EEE
+}
+
+* {
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: "Agdasima", sans-serif;
+}
+
+body {
+    background: linear-gradient(240deg, var(--gradient_one), var(--gradient_two)) no-repeat;
+    height: 100vh;
+}
+
+.float_parent::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/***************************** Global styles ****************************************************/
+
+section {
+    width: 70%;
+    margin: 50px auto;
+    border-radius: 5px;
+    border: 2px solid #CCC;
+}
+
+.left,
+.right {
+    float: left;
+    width: 50%;
+    padding: 30px;
+}
+
+.left {
+    background-color: var(--primary_color);
+    height: 100%;
+    text-align: center;
+    padding-top: 80px;
+    color: var(--left_color);
+    height: 560px;
+}
+
+.right {
+    background-color: var(--left_color);
+}
+
+h2 {
+    text-align: center;
+    font-weight: 700;
+}
+
+.inputs_container {
+    width: 70%;
+    text-align: center;
+    margin: auto;
+}
+
+label {
+    display: block;
+    text-align: initial;
+}
+
+input:not([type='submit']),
+textarea {
+    margin-bottom: 20px;
+    background-color: var(--input_bg);
+    border-radius: 2px;
+    padding: 15px;
+    border: transparent;
+    outline: none;
+    resize: vertical;
+    width: 100%;
+}
+
+input:first-of-type {
+    margin-top: 10px;
+}
+
+input[type='submit'] {
+    background-color: var(--primary_color);
+    color: var(--left_color);
+    border: none;
+    padding: 10px;
+    width: 120px;
+    border-radius: 20px;
+}

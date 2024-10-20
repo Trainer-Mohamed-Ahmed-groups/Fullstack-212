@@ -6,106 +6,56 @@ body {
     box-sizing: border-box;
 }
 
-nav {
-    background-color: #73ff01;
-    height: 70px;
-    z-index: 4;
-    /* position: sticky;
-    top: 0; */
-    position: fixed;
-    width: 100%;
-    top: 0;
+.parent {
+    height: 300px;
+    width: 300px;
+    margin: 50px auto;
+    background-color: #797979;
+    padding: 20px;
 }
 
-.position {
+.parent:hover .translate {
+    /* transform: translateY(-50px); */
+    transform: rotateY(-180deg);
+    /* transform: scale(1.5); */
+    /* transform: skew(30deg); */
+    transform-origin: 100% 100%;
+}
+
+.translate {
     height: 100px;
-    width: 150px;
-    background-color: #EEE;
-    border: 2px solid red
+    width: 100px;
+    background-color: #e7e7e7;
+    transition: .5s;
 }
 
-
-.fixed {
-    position: fixed;
-    top: 100px;
-    right: 50px;
-}
-
-.sticky {
-    position: sticky;
-    top: 10px;
-}
-
-.relative {
-    height: 400px;
-    width: 400px;
-    background-color: #999;
+.card {
     position: relative;
+    height: 220px;
+    width: 150px;
+    margin: auto;
+    transition: .5s;
+    backface-visibility: hidden;
 }
 
-.abs {
+.card_parent:hover .card {
+    transform: rotateY(-180deg);
+}
+
+.front,
+.back {
     position: absolute;
-    top: 50px;
-    right: 50px;
-    z-index: 2;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
 }
 
-.abs:nth-child(2) {
-    top: 70px;
-    right: 70px;
-    background-color: #ffbaba;
-    z-index: 1;
+.front {
+    background-color: #F00;
 }
 
-.abs:nth-child(3) {
-    top: 90px;
-    right: 90px;
-    background-color: #1d7ff7;
-    z-index: 3;
-}
-
-.content {
-    height: 100px;
-    width: 250px;
-    background-color: #0fd419;
-    /* overflow: auto; */
-    overflow: scroll;
-    overflow: hidden;
-}
-
-h1 {
-    /* text-align: center; */
-    text-align: start;
-}
-
-h2 {
-    direction: rtl;
-    text-align: start;
-}
-
-a {
-    text-decoration: none;
-    color: #777;
-    text-transform: uppercase;
-}
-
-a:hover {
-    color: red
-}
-
-.spacing {
-    text-indent: 20px;
-    line-height: 35px;
-    word-spacing: 15px;
-    letter-spacing: 5px;
-}
-
-
-.text_effects {
-    width: 200px;
-    height: 60px;
-    background-color: #1ddfdf;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+.back {
+    background-color: #00F;
+    transform: rotateY(-180deg);
 }
