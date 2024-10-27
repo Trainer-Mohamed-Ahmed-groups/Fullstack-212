@@ -1,157 +1,230 @@
-:root {
-    --main_color: #e8e8e8
-}
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 
 body {
-    /* height: 5000px; */
+    height: 5000px;
+}
+
+/* ! ---------------------- Start global styles ---------------------- */
+:root {
+    --primary: #59ab6e;
+    --main_bg: #212934;
+
+    --header_font: #cfd6e1;
+    --light_font: #484c4f;
+    --dark_font: #23272b;
+
+    --hero_bg: #efefef;
+    --bg2: #e9eef5;
+    --active_star: #ede861;
+    --not_active_star: #bcbcbc;
+    --copy_rights_bg: #1d242d;
+    --footer_font: #cfd6cd
 }
 
 * {
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
 
-.transition_example {
-    background-color: var(--main_color);
-    width: 300px;
-    height: 100px;
-    /* transition-duration: 2s;
-    transition-property: all;
-    transition-timing-function: ease-in-out;
-    transition-delay: 3s; */
-
-    transition: 2s all ease-in-out;
+.container {
+    width: 75%;
+    margin: auto;
 }
 
-.transition_example:hover {
-    background-color: #2c2c2c;
-    width: 500px;
-    font-size: 30px;
-    color: #FFF;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-.text_example {
-    font-size: 2rem;
-    text-shadow: 6px 3px 9px #F00;
+.flex {
+    display: flex
 }
 
-.box_example {
-    height: 200px;
-    width: 200px;
-    background-color: #232323;
-    margin: 20px auto;
-    box-shadow: inset 10px 10px 10px 10px #00F;
-}
-
-.animation_example {
-    height: 200px;
-    width: 200px;
-    background-color: #402c2c;
-    position: absolute;
-    top: 0;
-    left: 0;
-    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-    /* animation: kimit 3s ease-in-out infinite alternate; */
-    animation: test 2s ease-in-out forwards;
-}
-
-.loading {
-    height: 70px;
-    width: 70px;
-    border: 15px solid #999;
-    border-top: 15px solid transparent;
-    border-radius: 50%;
-    margin: 40px auto;
-    animation: loading_animation .5s infinite linear
-}
-
-.parent .child {
-    background-color: #2c2c2c;
-    float: left;
-    color: #FFF;
-    font-size: 5rem;
-    padding: 20px;
-    width: 25%;
-    text-align: center;
-}
-
-.parent_two {
-    display: flex;
-    height: 500px;
-    background-color: #f7ff05;
+.justify_between {
     justify-content: space-between;
-    /* flex-direction: column; */
-    /* flex-wrap: wrap; */
-    /* align-content: flex-end; */
+}
+
+.align_center {
     align-items: center;
 }
 
-.parent_two .child {
-    background-color: #999494;
-    color: #FFF;
-    border: 2px solid #00F;
-    font-size: 5rem;
-    padding: 20px;
-    /* width: 25%; */
+.capitalize {
+    text-transform: capitalize;
+}
+
+.text_center {
     text-align: center;
 }
 
-.parent_two .child:nth-child(3) {
-    align-self: flex-start;
-    /* order: 1; */
+.section_title {
+    text-align: center;
+    font-weight: 400;
+    text-transform: capitalize;
 }
 
-@media (max-width:600px) {
-    :root {
-        font-size: 8px;
-    }
-
-    .child {
-        width: 100%;
-    }
+.section_desc {
+    text-align: center;
+    font-weight: 400;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 40px;
 }
 
-@media (min-width:601px) and (max-width:1000px) {
+/* ! ---------------------- End global styles ---------------------- */
+/* ! ---------------------- Start header styles ---------------------- */
+
+header {
+    background-color: var(--main_bg);
+    color: var(--header_font);
+    font-size: .8rem;
+    padding: 10px 0;
+}
+
+header .left a {
+    margin-inline-end: 10px;
+}
+
+header .right a,
+header .left a span {
+    margin-inline-start: 5px;
+}
+
+header .right a i {
+    transition: .5s all ease-in-out;
+}
+
+header .right a:hover i {
+    transform: scale(1.4);
+}
+
+
+
+/* ! ---------------------- End header styles ---------------------- */
+/* ! ---------------------- Start nav styles ---------------------- */
+nav ul {
+    list-style: none;
+    gap: 60px;
+    color: var(--light_font);
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+
+nav .icons i {
+    margin-inline-start: 7px;
+}
+
+nav .icons .shopping,
+nav .icons .notification {
+    position: relative;
+}
+
+nav .icons .shopping::after,
+nav .icons .notification::after {
+    position: absolute;
+    top: -15px;
+    background-color: var(--bg2);
+    font-size: .6rem;
+    padding: 4px;
+    border-radius: 10px;
+    height: 11px;
+    width: max-content;
+    text-align: center;
+    line-height: 14px;
+}
+
+nav .icons .shopping::after {
+    content: "7";
+    right: -9px;
+}
+
+nav .icons .notification::after {
+    content: "+99";
+    right: -17px;
+}
+
+
+/* ! ---------------------- End nav styles ---------------------- */
+/* ! ---------------------- Start hero section styles ---------------------- */
+.hero {
+    background-color: var(--hero_bg);
+    padding: 30px 0;
+}
+
+.hero .container>img {
+    width: 40%;
+}
+
+/* ! ---------------------- End hero section styles ---------------------- */
+/* ! ---------------------- Start categories section styles ---------------------- */
+.categories .item img {
+    border-radius: 50%;
+    border: 1px solid var(--header_font);
+}
+
+.categories button {
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+    color: #FFF;
+    background-color: var(--primary);
+    font-weight: 300;
+    cursor: pointer;
+}
+
+/* ! ---------------------- End categories section styles ---------------------- */
+
+@media (max-width:750px) {
     :root {
         font-size: 12px;
     }
 
-    .child {
-        width: 50%;
+    nav ul {
+        gap: 20px;
+    }
+
+    nav .icons .shopping::after,
+    nav .icons .notification::after {
+        height: 7px;
+        line-height: 7px;
     }
 }
 
-@keyframes kimit {
+@media (max-width:600px) {
 
-    0%,
-    100% {
-        left: 0;
-        top: 0;
+    /* ****************? Global *********************** */
+    :root {
+        font-size: 8px;
     }
 
-    25% {
-        top: 0;
-        left: 300px;
+    header .container,
+    nav .container {
+        flex-direction: column;
+        gap: 10px;
     }
 
-    50% {
-        top: 300px;
-        left: 300px;
+    /* ****************? Header *********************** */
+    header .container {
+        /* flex-wrap: wrap; */
+        gap: 10px;
+        align-items: center;
     }
 
-    75% {
-        left: 0;
-        top: 300px;
-    }
-}
+    /* **************** nav *********************** */
 
-@keyframes test {
-    to {
-        height: 300px;
+    nav .container ul {
+        margin-top: 0;
     }
 }
 
-@keyframes loading_animation {
-    to {
-        transform: rotate(360deg);
-    }
+
+/* ******************************** */
+
+.fa-star {
+    color: var(--not_active_star)
+}
+
+.active {
+    color: var(--active_star)
 }
