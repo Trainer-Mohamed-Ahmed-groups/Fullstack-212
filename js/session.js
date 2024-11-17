@@ -1,101 +1,61 @@
 "use strict";
 
-var username = 'Omar';
+// console.log(x)
 
-switch (username) {
-
-    case 'Ali':
-    case 'Mohamed':
-        {
-            console.log("First or Second")
-            break
-        }
-    case 'Omar':
-        console.log("Third")
-        break;
-    default:
-        console.log("Not above")
-
-}
-////////////////////////////////////////////////////
-// var x = 51;
+var x = 5;
 
 
-try {
-    console.log(x)
-} catch (error) {
-    console.log("Mahmoud error : " + error.message)
-}
-finally {
-    console.log("Finally")
+function hello() {
+    const courseName = "Frontend"
 }
 
+// console.log(courseName)
 
-console.log("Hello")
-
-
-function getRectArea(width, height) {
-    if (isNaN(width) || isNaN(height)) {
-        throw "Parameter is not a number"
-    }
-    else {
-        return width * height
-    }
+if (5 > 4) {
+    const myName = "Mohamed";
 }
-
-try {
-    console.log(getRectArea(5, "tree"))
-} catch (error) {
-    console.error(error)
-}
-///////////////////////////////////////////////////////
-
-// o = 15;
-
-var t = 0;
-
-while (t <= 10) {
-    console.log(t)
-    t++;
-}
-
-console.log("-----------------");
-
-var p = 0;
-
-do {
-    console.log(p)
-    p++;
-} while (p <= 10);
-
-console.log("-----------------");
+// console.log(myName);
 
 
-for (var i = 0; i <= 10; i++) {
-    console.log(i)
-}
+// const t = 5;
 
-console.log("-----------------");
+// console.log(t)
 
-for (var i = 1; i <= 10; i += 2) {
-    // if (i === 5) break;
-    if (i === 5) continue;
-    console.log(i)
-}
+// t = 7;
 
-console.log("-----------------");
+// console.log(t)
 
-var persons = ["Mohamed", "Ahmed", "Mahmoud", "Omar"];
+sayOk()
 
-
-for (var index = 0; index < persons.length; index++) {
-    const element = persons[index];
-    console.log(index + 1 + " - " + element)
-}
-
-function helloFn() {
-    return; "Hello"
+function sayOk() {
+    console.log("OK")
 }
 
 
-console.log(helloFn())
+// var sayOk = function () {
+//     console.log("OK")
+// }
+
+console.log(5 * "8") // 40
+console.log(5 * "8R") // NaN
+console.log(5 + "8") // '58'
+
+var arr = ""
+
+if (arr) {
+    console.log("OK")
+}
+else {
+    console.log("NO")
+}
+
+console.log(5 === 50)
+
+
+/////////////////////////////////////////////////
+console.log(Number("123"))
+console.log(+"123")
+
+console.log(parseInt('2.951' * 8))
+console.log(parseFloat('4512.451'))
+
