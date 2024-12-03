@@ -1,6 +1,0 @@
-@mixin theme($theme: black) {
-    background: $theme;
-    box-shadow: 0 0 1px rgba($theme, 0.25);
-    color: #fff;
-    border: 2px solid $theme;
-}

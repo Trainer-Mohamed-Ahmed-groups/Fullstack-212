@@ -1,29 +1,4 @@
-.myBtn {
-  border: 1px solid;
-  border-radius: 50%;
-  background-color: #f00;
-  /* This is a CSS comment */
-  background: black;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
-  color: #fff;
-  border: 2px solid black; }
-
-.parent {
-  color: #99f323;
-  background: #00ff04;
-  box-shadow: 0 0 1px rgba(0, 255, 4, 0.25);
-  color: #fff;
-  border: 2px solid #00ff04; }
-  .parent .card {
-    font-weight: bold; }
-    .parent .card > span {
-      text-transform: uppercase; }
-    .parent .card:nth-child(2) {
-      font-style: italic; }
-    .parent .card::after {
-      content: "f"; }
-  @media (min-width: 500px) {
-    .parent {
-      display: flex; } }
-
-/*# sourceMappingURL=style.css.map */
+.dark {
+    background-color: #333;
+    color: #FFF
+}
