@@ -1,71 +1,92 @@
-// var i = 1;
-// function sayOk() {
-//     console.log(i)
-//     i++
+const firstDivision = document.getElementById('first');
+
+var addNew = function () {
+    firstDivision.className = 'dark';
+    // firstDivision.classList.add('alert-primary');
+    // firstDivision.classList.remove('alert-danger');
+    // console.log(firstDivision.classList.contains('alert'))
+    // firstDivision.classList.toggle('alert-primary');
+    // console.log(firstDivision.classList.item(0))
+}
+
+////////////////////////////////////////
+var parent = document.querySelector('#parent');
+
+console.log(parent.children)
+console.log(parent.firstElementChild)
+console.log(parent.lastElementChild)
+
+
+console.log(parent.childNodes)
+console.log(parent.firstChild)
+console.log(parent.lastChild)
+
+
+
+console.log(first.nextElementSibling)
+console.log(parent.previousElementSibling)
+
+///////////////////////////////
+const parent2 = document.createElement('div');
+const child = document.createElement('p');
+const childTwo = document.createElement('p');
+
+
+// parent2.append(child, childTwo, 'Hello world'); // Works fine
+parent2.appendChild(child, childTwo, 'Hello world');
+
+console.log(parent2)
+
+/**************************************/
+
+const myBtn = document.getElementById('my_btn');
+
+// myBtn.onclick = function () {
+//     console.log("I am here")
 // }
 
-// const myInterval = setInterval(sayOk, 1000)
-
-
-// function stopInterval() {
-//     clearInterval(myInterval)
+// myBtn.onclick = function () {
+//     console.log("I am here 2")
 // }
 
-// function sayOk2() { console.log("Ok 2") }
+myBtn.addEventListener('click', function () {
+    console.log("I am here again")
+})
 
-// const myTimeOut = setTimeout(sayOk2, 5000)
+// click - dblclick - contextmenu 
 
-// function stopTimeOut() {
-//     clearTimeout(myTimeOut)
-// }
-
-/************************** Math  method **************/
-
-console.log(Math.max(12, 45, 78, 451, 15, 78, 8))
-console.log(Math.min(1, 45, 78, 451, 15, 78, 8))
-
-console.log(Math.round(5.5))
-console.log(Math.ceil(5.1))
-console.log(Math.floor(5.9))
-
-console.log(Math.pow(5, 3))
-console.log(Math.sqrt(25))
-console.log(Math.abs(-5))
-console.log(Math.random())
-console.log(Math.random() * 10)
-
-console.log(Math.floor(Math.random() * 10))
-
-var employees = ["Mahmoud", "Ali", "Ezzat", "Omar"];
-
-console.log(Math.floor(Math.random() * 3))
-console.log(employees[Math.floor(Math.random() * employees.length)])
-
-// .999999 * 3 => 2
-// .000001 * 3 => 0
+// myBtn.addEventListener('contextmenu', function () {
+//     console.log("I am here again 2")
+// })
 
 
-/************************** Number method **************/
 
-console.log(Number.MAX_VALUE)
-console.log(Number.MAX_SAFE_INTEGER)
-console.log(Number.MIN_VALUE)
-console.log(Number.MIN_SAFE_INTEGER)
-
-console.log(Number.isNaN(12 * 15))
-console.log(isNaN("N"))
-console.log(isFinite(-3 / 0))
-console.log(Number.isInteger(12))
-console.log(Number.isSafeInteger(Number.MAX_VALUE))
-
-var myNumber = 45.123186;
-
-console.log(myNumber.toFixed(4))
-console.log(myNumber.toPrecision(4))
-console.log(myNumber.toString())
-
-// var myDate = new Date()
+function myFunction(e) {
+    let x = e.clientX;
+    let y = e.clientY;
+    let coor = "Coordinates: (" + x + "," + y + ")";
+    console.log(coor)
+}
 
 
-let ms = Date.parse("March 21, 2012");
-console.log(ms)
+// This keyword & e
+const myForm = document.forms[0]
+myForm.addEventListener('submit',  (event) => {
+    console.log(myForm.children[0])
+    console.log(myForm.children.username)
+    console.log(document.getElementsByName('username')[0])
+    console.log(document.getElementsByName('username')[0])
+    console.log("*********************")
+    // if()
+    event.preventDefault();
+    console.log(event)
+    console.log(this)
+})
+
+
+var myTestFunction = () => console.log(this)
+
+
+
+
+// myTestFunction()
