@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta SEO tags -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="spinner-border" role="status" id="loading">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <ul class="list-group" id="usersOutput"></ul>
+    <!-- <script>
+        var peopleJS = [{ name: "Mohamed", age: 15 }, { name: "Sami", age: 22 }]
+        var peopleJSON = '[{ "name": "Ali", "age": 15 }, { "name": "Mahmoud", "age": 22 }]'
+
+        console.log(peopleJS)
+        console.log(typeof peopleJS)
+        console.log(JSON.stringify(peopleJS))
+
+        console.log("-".repeat(25))
+
+        console.log(peopleJSON)
+        console.log(typeof peopleJSON)
+        console.log(JSON.parse(peopleJSON))
+    </script> -->
+    <!-- <script src="js/main.js"></script> -->
+    <script>
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(err => console.error(err));
+    </script>
+</body>
+
+</html>
