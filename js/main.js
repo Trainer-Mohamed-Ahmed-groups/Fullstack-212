@@ -1,44 +1,83 @@
-var usersRequest = new XMLHttpRequest();
-var usersOutput = document.getElementById('usersOutput'),
-    loading = document.querySelector('#loading');
+import User, { Doctor, Pen, Person, myName } from "./User.js";
 
-console.log(loading)
 
-// 1
+const fruits = new Map([
+    ["apples", 500],
+    ["oranges", 200],
+    ["bananas", 300],
+    ["oranges", 200],
+]);
 
-// setTimeout()
-usersRequest.onreadystatechange = function () {
-    if (this.readyState === 4 && this.status === 200) {
 
-        let myData = JSON.parse(this.response)
+console.log(fruits)
+console.log(fruits.get("apples"))
+console.log(typeof fruits)
 
-        for (let index = 0; index < myData.length; index++) {
-            const user = myData[index];
-            usersOutput.innerHTML += `<li class="list-group-item">${user.name}</li>`
+
+
+const letters = new Set();
+
+// Add Values to the Set
+letters.add("a");
+letters.add("b");
+letters.add("c");
+letters.add("b");
+
+console.log(letters)
+console.log(typeof letters)
+
+
+/////////////////////////////////////////////////
+
+let conditions = false;
+
+
+const proms = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        if (conditions) {
+            resolve("Hello")
+        } else {
+            reject("This condition faild")
         }
-        loading.classList.add('d-none')
-    }
+    }, 2000);
+});
+
+console.log("test")
+
+proms.then((result) => {
+    console.log(result);
+}).catch(function (error) {
+    console.log(error);
+});
+/***********************************************/
+
+var employeeOne = {
+    name: "Ali",
+    age: 25
 }
 
+var employeeTwo = {
+    name: "Omar",
+    age: 85
+}
 
-// usersRequest.onreadystatechange = function () {
-//     if (this.readyState === 4 && this.status === 200) {
-//         setTimeout(() => {
-//             let myData = JSON.parse(this.response)
+console.log(employeeOne)
 
-//             for (let index = 0; index < myData.length; index++) {
-//                 const user = myData[index];
-//                 usersOutput.innerHTML += `<li class="list-group-item">${user.name}</li>`
-//             }
-//             loading.classList.add('d-none')
-//         }, 2000)
-//     }
-// }
 
-// 2
-usersRequest.open('GET', 'https://jsonplaceholder.typicode.com/users');
 
-// 3
-usersRequest.send();
+var userOne = new User("Mohamed", 16);
 
-setTimeout(() => console.log("OK"), 3000)
+console.log(userOne);
+console.log(myName)
+
+var penOne = new Pen("red", 10)
+
+console.log(penOne)
+
+var personOne = new Person("Osamn", 62)
+
+console.log(personOne)
+
+var doctorOne = new Doctor("Ahmed",50,"Chest")
+
+console.log(doctorOne)
