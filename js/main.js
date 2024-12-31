@@ -1,83 +1,14 @@
-import User, { Doctor, Pen, Person, myName } from "./User.js";
+const add = (a, b, c) => a + b + c;
 
+console.log(add(1, 2, 3))
 
-const fruits = new Map([
-    ["apples", 500],
-    ["oranges", 200],
-    ["bananas", 300],
-    ["oranges", 200],
-]);
-
-
-console.log(fruits)
-console.log(fruits.get("apples"))
-console.log(typeof fruits)
-
-
-
-const letters = new Set();
-
-// Add Values to the Set
-letters.add("a");
-letters.add("b");
-letters.add("c");
-letters.add("b");
-
-console.log(letters)
-console.log(typeof letters)
-
-
-/////////////////////////////////////////////////
-
-let conditions = false;
-
-
-const proms = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        if (conditions) {
-            resolve("Hello")
-        } else {
-            reject("This condition faild")
-        }
-    }, 2000);
-});
-
-console.log("test")
-
-proms.then((result) => {
-    console.log(result);
-}).catch(function (error) {
-    console.log(error);
-});
-/***********************************************/
-
-var employeeOne = {
-    name: "Ali",
-    age: 25
+const add2 = function (a) {
+    return function (b) {
+        return function (c) { return a + b + c }
+    }
 }
 
-var employeeTwo = {
-    name: "Omar",
-    age: 85
-}
+const add3 = (a) => (b) => (c) => a + b + c
 
-console.log(employeeOne)
-
-
-
-var userOne = new User("Mohamed", 16);
-
-console.log(userOne);
-console.log(myName)
-
-var penOne = new Pen("red", 10)
-
-console.log(penOne)
-
-var personOne = new Person("Osamn", 62)
-
-console.log(personOne)
-
-var doctorOne = new Doctor("Ahmed",50,"Chest")
-
-console.log(doctorOne)
+console.log(add2(2)(3)(4))
+console.log(add3(2)(3)(4))
